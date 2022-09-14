@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+
+{% block css %} <link rel="stylesheet" href="/static/css/calculadora.css"> {% endblock %}
+
+{% block title %} <title>Calculadora con python</title> {% endblock %}
+
+
+
+
+{% block body %}
+
+<div class="calculator">
+    <h1>Python-calculator</h1>
+    <form action="/operation" method="POST">
+        <div class="form-group">
+            <label for="value_one">Value one</label>
+            <input type="text" class="form-control" name="value_one" id="value_one">
+        </div>
+        <div class="form-check">
+            <label id="suma" class="form-check-label">
+                <input type="radio" class="form-check-input" name="operation" id="suma" value="suma">
+                Suma
+            </label>
+            <br>
+            <label id="resta" class="form-check-label">
+                <input type="radio" class="form-check-input" name="operation" id="resta" value="resta">
+                Resta
+            </label>
+            <br>
+            <label id="multiplicacion" class="form-check-label">
+                <input type="radio" class="form-check-input" name="operation" id="multiplicacion" value="multiplicacion">
+                Multiplicacion
+            </label>
+            <br>
+            <label id="division" class="form-check-label">
+                <input type="radio" class="form-check-input" name="operation" id="division" value="division">
+                Division
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="value_two">Value two</label>
+            <input type="text" class="form-control" name="value_two" id="value_two">
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="=">
+
+        <div class="form-group">
+            <label for="result"></label>
+            <input type="text" class="form-control" id="result" value="">
+        </div>
+
+        <br>
+        <a class="btn btn-primary" href="/" role="button">Reset</a>
+
+    </form>
+    
+</div>
+
+    
+{% endblock %}

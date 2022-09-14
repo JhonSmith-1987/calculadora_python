@@ -1,0 +1,24 @@
+.calculator{
+    width: 40%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    display: block;
+}
+
+.btn{
+    display: block;
+    margin: auto;
+}
+
+a{
+    display: block;
+    width: 120px;
+    margin: auto;
+}
